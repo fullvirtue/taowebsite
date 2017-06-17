@@ -1,11 +1,26 @@
 @import '~bulma/sass/utilities/initial-variables';
 
-$primary: #113E32;
+$green-dark: #113E32;
+$family-serif: serif;
 
 @import '~bulma';
 
+.site-logo {
+  display: inline;
+  font-weight: $weight-bold;
+  font-family: $family-serif;
+  border: 1px $white-ter solid;
+  padding: 0.2rem 0.8rem;
+}
+
+.header {
+  background-color: $green-dark;
+  padding: 0.5rem;
+  color: $white-ter;
+}
+
 .footer {
-  background-color: #333333;
-  padding: 1rem;
-  color: #FBFBFB;
+  background-color: $grey-dark;
+  padding: 0.5rem;
+  color: $white-ter;
 };
