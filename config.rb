@@ -45,8 +45,16 @@ page '/*.txt', layout: false
 #   activate :minify_javascript
 # end
 
+configure :build do
+  activate :relative_assets
+end
+
 activate :external_pipeline,
   name: :webpack,
   command: build? ? './node_modules/webpack/bin/webpack.js -p --bail' : './node_modules/webpack/bin/webpack.js --watch -d',
   source: ".tmp/dist",
   latency: 1
+
+activate :deploy do |deploy|
+  deploy.deploy_method = :git
+end
