@@ -1,0 +1,27 @@
+{
+  "name": "taowebsite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/fullvirtue/taowebsite.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fullvirtue/taowebsite/issues"
+  },
+  "homepage": "https://github.com/fullvirtue/taowebsite#readme",
+  "devDependencies": {
+    "bulma": "^0.4.2",
+    "css-loader": "^0.28.4",
+    "extract-text-webpack-plugin": "^2.1.2",
+    "node-sass": "^4.5.3",
+    "sass-loader": "^6.0.6",
+    "webpack": "^2.6.1"
+  }
+}
