@@ -27,8 +27,11 @@ $family-serif: serif;
 }
 
 .image-caption {
-  font-size: $size-7;
   margin-top: 0.5rem;
+}
+
+.columns-information {
+  font-size: $size-7;
 }
 
 .site-logo {
@@ -48,6 +51,14 @@ $family-serif: serif;
   margin: 0 1rem;
 }
 
+.has-information-border {
+  border-top: 1px #113E32 solid;
+}
+
+.has-information-border-bottom {
+  border-bottom: 1px #113E32 solid;
+}
+
 .section {
   padding: 0.5rem 1.5rem;
   margin: 0.5rem 0;
@@ -61,6 +72,7 @@ $family-serif: serif;
 
 .footer {
   background-color: $grey-dark;
+  margin-top: 3rem;
   padding: 0.5rem;
   color: $white-ter;
 };
