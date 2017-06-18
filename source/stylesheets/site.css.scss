@@ -2,6 +2,9 @@
 
 $green-dark: #113E32;
 $family-serif: serif;
+$green: #009286;
+
+$primary: $green;
 
 @import '~bulma';
 
@@ -57,6 +60,26 @@ $family-serif: serif;
 
 .has-information-border-bottom {
   border-bottom: 1px #113E32 solid;
+}
+
+.container-collaboration {
+  padding: 2rem 1rem;
+  border: 1px #113E32 solid;
+}
+
+.title-collaboration {
+  font-weight: $weight-bold;
+}
+
+ul.list {
+  list-style: disc outside;
+  margin-left: 1rem;
+  padding-left: 1rem;
+}
+
+.button.is-large-button {
+  padding: 1rem 3rem;
+  border-radius: 20px;
 }
 
 .section {
