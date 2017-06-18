@@ -1,12 +1,17 @@
 <!doctype html>
-<html>
+<html prefix="og: http://ogp.me/ns#">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Use the title from a page's frontmatter if it has one -->
-    <title><%= current_page.data.title || "Middleman" %></title>
+    <title><%= current_page.data.title %></title>
+    <meta property="og:title" content="<%= current_page.data.title %>">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="<%= data.site.url %><%= image_path(current_page.data.og_image) %>">
+    <meta property="og:url" content="<%= data.site.url %>">
+    <meta property="description" content="<%= current_page.data.description %>">
     <%= stylesheet_link_tag "all" %>
     <%= javascript_include_tag "site" %>
   </head>
