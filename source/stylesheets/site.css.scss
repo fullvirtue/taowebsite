@@ -67,11 +67,12 @@ $primary: $green;
   border: 1px #113E32 solid;
 }
 
-.title-collaboration {
+.is-bold {
   font-weight: $weight-bold;
 }
 
 ul.list {
+  margin: 1rem auto;
   list-style: disc outside;
   margin-left: 1rem;
   padding-left: 1rem;
