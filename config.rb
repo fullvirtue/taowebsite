@@ -47,6 +47,7 @@ page '/*.txt', layout: false
 
 configure :build do
   activate :relative_assets
+  activate :asset_hash
 end
 
 activate :external_pipeline,
