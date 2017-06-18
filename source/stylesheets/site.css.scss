@@ -88,6 +88,12 @@ ul.list {
   border-radius: 20px;
 }
 
+.has-social-buttons .social-button {
+  display: inline-block;
+  vertical-align: top;
+  line-height: 0;
+}
+
 .section {
   padding: 0.5rem 1.5rem;
   margin: 0.5rem 0;
