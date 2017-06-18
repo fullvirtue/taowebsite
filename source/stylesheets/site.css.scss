@@ -5,6 +5,26 @@ $family-serif: serif;
 
 @import '~bulma';
 
+.section {
+  padding: 1.5rem;
+}
+
+.container-brand-detail {
+  border-top: 1px $border solid;
+  border-bottom: 1px $border solid;
+}
+
+.title-brand-name {
+  font-weight: $weight-bold;
+  font-family: $family-serif;
+  letter-spacing: 0.2rem;
+  margin: 1rem 0;
+}
+
+.content-brand-text {
+  margin: 0 1.5rem 1rem;
+}
+
 .site-logo {
   display: inline;
   font-weight: $weight-bold;
