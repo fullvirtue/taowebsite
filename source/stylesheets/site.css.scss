@@ -104,4 +104,8 @@ ul.list {
   margin-top: 3rem;
   padding: 0.5rem;
   color: $white-ter;
-};
+}
+
+.title:not(:last-child) {
+  margin-bottom: 0.8rem;
+}
