@@ -60,3 +60,7 @@ activate :deploy do |deploy|
 end
 
 redirect 'index.html', to: '/makers/PLEST/'
+
+set :url_root, 'http://taojapan.work'
+
+activate :search_engine_sitemap
