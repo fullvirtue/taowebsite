@@ -1,0 +1,23 @@
+sudo: true
+language: ruby
+rvm: 2.4.1
+cache:
+  bundler: true
+  directories:
+  - node_modules
+env:
+  global:
+  - GIT_COMMITTER_NAME='fullvirtue@travis-ci'
+  - GIT_COMMITTER_EMAIL='fullvirtue@gmail.com'
+  - GIT_AUTHOR_NAME='fullvirtue@travis-ci'
+  - GIT_AUTHOR_EMAIL='fullvirtue@gmail.com'
+  - secure: ¦‚±‚±‚ÉˆÃ†‰»‚µ‚½ƒL[‚ð–„‚ßž‚Þ¦
+  - TRAVIS_NODE_VERSION="6.1"
+before_install:
+  - "rm -rf ~/.nvm && git clone https://github.com/creationix/nvm.git ~/.nvm && (cd ~/.nvm && git checkout `git describe --abbrev=0 --tags`) && source ~/.nvm/nvm.sh && nvm install $TRAVIS_NODE_VERSION"
+  - "npm install"
+script:
+  - "bundle exec middleman build --verbose"
+after_success:
+- '[ "$TRAVIS_BRANCH" == "master" ] && [ $GH_TOKEN ] && bundle exec middleman deploy
+  >/dev/null 2>&1'
