@@ -58,3 +58,5 @@ activate :external_pipeline,
 activate :deploy do |deploy|
   deploy.deploy_method = :git
 end
+
+redirect 'index.html', to: '/makers/PLEST/'
