@@ -1,5 +1,6 @@
-language: node_js
-node_js: 6
+language: ruby
+rvm:
+  - 2.4.1
 branches:
   only: master
 git:
@@ -7,11 +8,13 @@ git:
 cache:
   directories: node_modules
 install:
-- npm install
-- npm run build
-deploy:
-  provider: pages
-  skip_cleanup: true
-  local_dir: build
+  - bundle install --path vendor/bundle
+  - npm install
+script:
+  - git config --global user.name 'tao-deployer'
+  - git config --global user.email 'deploy@taojapan.work'
+  - git remote set-url origin https://fullvirtue:${GITHUB_TOKEN}@github.com/fullvirtue/taowebsite.git
+  - bundle exec middleman build
+  - bundle exec middleman deploy
 dd:
   secure: IUkH5QetAWFHMmXp0avaah1arK2dBpYnrwa9ACt1CcyKALR7IKBmjsy11hmJW8NKsXJNCrLxKSEo8J9bxakrzBVZ12ZyY9CvMfSS/eytf+lhvnLETw/xwP+bifeK4J450pHRl0uIgF1MaTaTOmR8K8vRH5hLtmD8xYWmI/AezrVSSYyaH5XUWY5ROD/fZC2qudsr6ruAq40P5luPnIo9jgJI1/cbVaDHDSKSyKHcQlY9reMP6xUjUa212R3jtVinGprjhKG9ZbNJ/KqkMdkiDYv+fK9jty1UFRqxceRHUKFM1+rHCkOCteUKeXkz86kqKuvrCIlfY0MKSd+z+Bl8kRwcbzgiOWmWpawFH2I2rx5aojfVyOdPH1Gn5HGuKWF9n4X0iSEmJx1UBz0Hn43KOArAkJG9N9glwJVGRiWwjujngda3ZX5HLXGv7jpbi56tK2LKYSKldro8S0csZGmaS/U0c28sTkYj8wCN59ZwboWz2oW5j5NN5OG8QJhURPhwASsd4cMgtDlaYzm/E0tr/UovtG4AHXBOicYnytK5batm43PI/7LMumVRN7TPceLxFZc7kwrKHyB0559l8WQVracBQWQ2sZi0+M5tLl7Rjd2x9nYY5ORiljbVNzP/LKcS6DBGbJKzgPXH4g9Yy2g5pS1IJz+BBouzhu7lqsDtHWg=
