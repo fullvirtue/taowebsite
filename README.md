@@ -40,7 +40,6 @@ $ brew -v
 
 ```
 $ brew update
-$ git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
 $ brew install readline ruby-build rbenv node
 ```
 
@@ -56,16 +55,19 @@ bash_profile 内に記載する文字列
 export PATH=$HOME/.rbenv/bin:$PATH
 eval "$(rbenv init -)"
 ```
+
 記載内容を反映
 
 ```
 $ source ~/.bash_profile
 ```
+
 rbenv が有効か確認
 
 ```
 $ rbenv --version
 ```
+
 ### rbenv と ruby をインストール
 
 rbenv でインストール可能なバージョン一覧
@@ -73,24 +75,19 @@ rbenv でインストール可能なバージョン一覧
 ```
 $ rbenv install -l
 ```
-rbenv をインストール
+
+ruby 2.4.1 をインストール
 
 ```
 $ rbenv install 2.4.1
 ```
-rbenv が 2.4.1 になっているのを確認する
+
+2.4.1がインストールされているのを確認する(リポジトリに `.ruby-version` があるのでデフォルトのrubyは切り替えなくても良い)
 
 ```
 $ rbenv versions
-$ rbenv global 2.4.1
-  system
-* 2.4.1 (set by /Users/xxxxx/.rbenv/version)
-```
-Ruby が 2.4.1 になっているのを確認する
-
-```
-$ ruby --version
-ruby 2.4.1p111 (2017-03-22 revision 58053) [x86_64-darwin16]
+*  system
+   2.4.1 (set by /Users/xxxxx/.rbenv/version)
 ```
 
 ### ソースコードを clone する
@@ -98,6 +95,13 @@ ruby 2.4.1p111 (2017-03-22 revision 58053) [x86_64-darwin16]
 ```
 $ git clone https://github.com/fullvirtue/taowebsite.git /git/taowebsite/
 $ cd /git/taowebsite/
+```
+
+### リポジトリのフォルダでrubyが2.4.1になっていることを確認する
+
+```
+$ ruby --version
+ruby 2.4.1p111 (2017-03-22 revision 58053) [x86_64-darwin16]
 ```
 
 ### リポジトリのフォルダ上で、bundlerとnpmで必要なパッケージをインストールする。
@@ -119,5 +123,6 @@ bundle exec middleman
 ## デプロイ方法
 
 ```
+bundle exec middleman build
 bundle exec middleman deploy
 ```
