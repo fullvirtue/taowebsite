@@ -2,6 +2,10 @@
 
 ## 開発環境の作り方(macOS)
 
+### Homebrew のインストール
+
+http://qiita.com/is0me/items/475fdbc4d770534f9ef1
+
 ### RubyとNode.jsのインストール
 
 ```
