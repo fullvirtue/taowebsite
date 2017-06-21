@@ -18,7 +18,7 @@ install:
 script:
   - git config --global user.name 'tao-deployer'
   - git config --global user.email 'deploy@taojapan.work'
-  - git remote set-url origin https://fullvirtue:${GITHUB_TOKEN}@github.com/fullvirtue/taowebsite.git
+  - git remote set-url origin "https://fullvirtue:$GITHUB_TOKEN@github.com/fullvirtue/taowebsite.git"
   - bundle exec middleman build
   - bundle exec middleman deploy
 dd:
